@@ -1,7 +1,5 @@
 grammar caziel;
 
-init: programa;
-
 programa: ID '{' statement* '}';
 
 statement: var | attr | exp | condition | loop | io;

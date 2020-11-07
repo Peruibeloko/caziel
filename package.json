@@ -1,0 +1,12 @@
+{
+  "name": "caziel",
+  "description": "package.json pra compilar projeto java fodase",
+  "authors": "carlos né, quem mais ia fazer isso",
+  "version": "1.0.0",
+  "scripts": {
+    "generate": "antlr4 -o java caziel.g4 && cd java && javac *.java",
+    "compile": "cd java && grun caziel programa ..\\teste.cz -tokens"
+  },
+  "main": "",
+  "dependencies": {}
+}

@@ -7,16 +7,6 @@ import org.antlr.v4.runtime.tree.ParseTreeListener;
  */
 public interface cazielListener extends ParseTreeListener {
 	/**
-	 * Enter a parse tree produced by {@link cazielParser#init}.
-	 * @param ctx the parse tree
-	 */
-	void enterInit(cazielParser.InitContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link cazielParser#init}.
-	 * @param ctx the parse tree
-	 */
-	void exitInit(cazielParser.InitContext ctx);
-	/**
 	 * Enter a parse tree produced by {@link cazielParser#programa}.
 	 * @param ctx the parse tree
 	 */
