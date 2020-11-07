@@ -1,4 +1,4 @@
-grammar caziel;
+grammar Caziel;
 
 programa: ID '{' statement* '}';
 

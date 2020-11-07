@@ -1,4 +1,4 @@
-// Generated from caziel.g4 by ANTLR 4.8
+// Generated from Caziel.g4 by ANTLR 4.8
 import org.antlr.v4.runtime.atn.*;
 import org.antlr.v4.runtime.dfa.DFA;
 import org.antlr.v4.runtime.*;
@@ -9,7 +9,7 @@ import java.util.Iterator;
 import java.util.ArrayList;
 
 @SuppressWarnings({"all", "warnings", "unchecked", "unused", "cast"})
-public class cazielParser extends Parser {
+public class CazielParser extends Parser {
 	static { RuntimeMetaData.checkVersion("4.8", RuntimeMetaData.VERSION); }
 
 	protected static final DFA[] _decisionToDFA;
@@ -83,7 +83,7 @@ public class cazielParser extends Parser {
 	}
 
 	@Override
-	public String getGrammarFileName() { return "caziel.g4"; }
+	public String getGrammarFileName() { return "Caziel.g4"; }
 
 	@Override
 	public String[] getRuleNames() { return ruleNames; }
@@ -94,13 +94,13 @@ public class cazielParser extends Parser {
 	@Override
 	public ATN getATN() { return _ATN; }
 
-	public cazielParser(TokenStream input) {
+	public CazielParser(TokenStream input) {
 		super(input);
 		_interp = new ParserATNSimulator(this,_ATN,_decisionToDFA,_sharedContextCache);
 	}
 
 	public static class ProgramaContext extends ParserRuleContext {
-		public TerminalNode ID() { return getToken(cazielParser.ID, 0); }
+		public TerminalNode ID() { return getToken(CazielParser.ID, 0); }
 		public List<StatementContext> statement() {
 			return getRuleContexts(StatementContext.class);
 		}
@@ -113,11 +113,11 @@ public class cazielParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_programa; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof cazielListener ) ((cazielListener)listener).enterPrograma(this);
+			if ( listener instanceof CazielListener ) ((CazielListener)listener).enterPrograma(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof cazielListener ) ((cazielListener)listener).exitPrograma(this);
+			if ( listener instanceof CazielListener ) ((CazielListener)listener).exitPrograma(this);
 		}
 	}
 
@@ -186,11 +186,11 @@ public class cazielParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_statement; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof cazielListener ) ((cazielListener)listener).enterStatement(this);
+			if ( listener instanceof CazielListener ) ((CazielListener)listener).enterStatement(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof cazielListener ) ((cazielListener)listener).exitStatement(this);
+			if ( listener instanceof CazielListener ) ((CazielListener)listener).exitStatement(this);
 		}
 	}
 
@@ -257,22 +257,22 @@ public class cazielParser extends Parser {
 	}
 
 	public static class VarContext extends ParserRuleContext {
-		public TerminalNode TIPO() { return getToken(cazielParser.TIPO, 0); }
+		public TerminalNode TIPO() { return getToken(CazielParser.TIPO, 0); }
 		public AttrContext attr() {
 			return getRuleContext(AttrContext.class,0);
 		}
-		public TerminalNode ID() { return getToken(cazielParser.ID, 0); }
+		public TerminalNode ID() { return getToken(CazielParser.ID, 0); }
 		public VarContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_var; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof cazielListener ) ((cazielListener)listener).enterVar(this);
+			if ( listener instanceof CazielListener ) ((CazielListener)listener).enterVar(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof cazielListener ) ((cazielListener)listener).exitVar(this);
+			if ( listener instanceof CazielListener ) ((CazielListener)listener).exitVar(this);
 		}
 	}
 
@@ -320,8 +320,8 @@ public class cazielParser extends Parser {
 	}
 
 	public static class AttrContext extends ParserRuleContext {
-		public TerminalNode ID() { return getToken(cazielParser.ID, 0); }
-		public TerminalNode OP_ATTR() { return getToken(cazielParser.OP_ATTR, 0); }
+		public TerminalNode ID() { return getToken(CazielParser.ID, 0); }
+		public TerminalNode OP_ATTR() { return getToken(CazielParser.OP_ATTR, 0); }
 		public ExpContext exp() {
 			return getRuleContext(ExpContext.class,0);
 		}
@@ -334,11 +334,11 @@ public class cazielParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_attr; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof cazielListener ) ((cazielListener)listener).enterAttr(this);
+			if ( listener instanceof CazielListener ) ((CazielListener)listener).enterAttr(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof cazielListener ) ((cazielListener)listener).exitAttr(this);
+			if ( listener instanceof CazielListener ) ((CazielListener)listener).exitAttr(this);
 		}
 	}
 
@@ -384,9 +384,9 @@ public class cazielParser extends Parser {
 	}
 
 	public static class ExpContext extends ParserRuleContext {
-		public List<TerminalNode> ID() { return getTokens(cazielParser.ID); }
+		public List<TerminalNode> ID() { return getTokens(CazielParser.ID); }
 		public TerminalNode ID(int i) {
-			return getToken(cazielParser.ID, i);
+			return getToken(CazielParser.ID, i);
 		}
 		public List<LiteralContext> literal() {
 			return getRuleContexts(LiteralContext.class);
@@ -406,11 +406,11 @@ public class cazielParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_exp; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof cazielListener ) ((cazielListener)listener).enterExp(this);
+			if ( listener instanceof CazielListener ) ((CazielListener)listener).enterExp(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof cazielListener ) ((cazielListener)listener).exitExp(this);
+			if ( listener instanceof CazielListener ) ((CazielListener)listener).exitExp(this);
 		}
 	}
 
@@ -497,9 +497,9 @@ public class cazielParser extends Parser {
 		public ExpContext exp(int i) {
 			return getRuleContext(ExpContext.class,i);
 		}
-		public List<TerminalNode> ID() { return getTokens(cazielParser.ID); }
+		public List<TerminalNode> ID() { return getTokens(CazielParser.ID); }
 		public TerminalNode ID(int i) {
-			return getToken(cazielParser.ID, i);
+			return getToken(CazielParser.ID, i);
 		}
 		public List<StatementContext> statement() {
 			return getRuleContexts(StatementContext.class);
@@ -513,11 +513,11 @@ public class cazielParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_condition; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof cazielListener ) ((cazielListener)listener).enterCondition(this);
+			if ( listener instanceof CazielListener ) ((CazielListener)listener).enterCondition(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof cazielListener ) ((cazielListener)listener).exitCondition(this);
+			if ( listener instanceof CazielListener ) ((CazielListener)listener).exitCondition(this);
 		}
 	}
 
@@ -718,11 +718,11 @@ public class cazielParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_loop; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof cazielListener ) ((cazielListener)listener).enterLoop(this);
+			if ( listener instanceof CazielListener ) ((CazielListener)listener).enterLoop(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof cazielListener ) ((cazielListener)listener).exitLoop(this);
+			if ( listener instanceof CazielListener ) ((CazielListener)listener).exitLoop(this);
 		}
 	}
 
@@ -794,11 +794,11 @@ public class cazielParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_forLoop; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof cazielListener ) ((cazielListener)listener).enterForLoop(this);
+			if ( listener instanceof CazielListener ) ((CazielListener)listener).enterForLoop(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof cazielListener ) ((cazielListener)listener).exitForLoop(this);
+			if ( listener instanceof CazielListener ) ((CazielListener)listener).exitForLoop(this);
 		}
 	}
 
@@ -892,11 +892,11 @@ public class cazielParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_whileLoop; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof cazielListener ) ((cazielListener)listener).enterWhileLoop(this);
+			if ( listener instanceof CazielListener ) ((CazielListener)listener).enterWhileLoop(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof cazielListener ) ((cazielListener)listener).exitWhileLoop(this);
+			if ( listener instanceof CazielListener ) ((CazielListener)listener).exitWhileLoop(this);
 		}
 	}
 
@@ -964,11 +964,11 @@ public class cazielParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_doWhile; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof cazielListener ) ((cazielListener)listener).enterDoWhile(this);
+			if ( listener instanceof CazielListener ) ((CazielListener)listener).enterDoWhile(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof cazielListener ) ((cazielListener)listener).exitDoWhile(this);
+			if ( listener instanceof CazielListener ) ((CazielListener)listener).exitDoWhile(this);
 		}
 	}
 
@@ -1035,11 +1035,11 @@ public class cazielParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_io; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof cazielListener ) ((cazielListener)listener).enterIo(this);
+			if ( listener instanceof CazielListener ) ((CazielListener)listener).enterIo(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof cazielListener ) ((cazielListener)listener).exitIo(this);
+			if ( listener instanceof CazielListener ) ((CazielListener)listener).exitIo(this);
 		}
 	}
 
@@ -1080,19 +1080,19 @@ public class cazielParser extends Parser {
 	}
 
 	public static class OpContext extends ParserRuleContext {
-		public TerminalNode OP_MAT_PREC_1() { return getToken(cazielParser.OP_MAT_PREC_1, 0); }
-		public TerminalNode OP_BOOL_PREC_1() { return getToken(cazielParser.OP_BOOL_PREC_1, 0); }
+		public TerminalNode OP_MAT_PREC_1() { return getToken(CazielParser.OP_MAT_PREC_1, 0); }
+		public TerminalNode OP_BOOL_PREC_1() { return getToken(CazielParser.OP_BOOL_PREC_1, 0); }
 		public OpContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_op; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof cazielListener ) ((cazielListener)listener).enterOp(this);
+			if ( listener instanceof CazielListener ) ((CazielListener)listener).enterOp(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof cazielListener ) ((cazielListener)listener).exitOp(this);
+			if ( listener instanceof CazielListener ) ((CazielListener)listener).exitOp(this);
 		}
 	}
 
@@ -1127,21 +1127,21 @@ public class cazielParser extends Parser {
 	}
 
 	public static class LiteralContext extends ParserRuleContext {
-		public TerminalNode STR() { return getToken(cazielParser.STR, 0); }
-		public TerminalNode INT() { return getToken(cazielParser.INT, 0); }
-		public TerminalNode DEC() { return getToken(cazielParser.DEC, 0); }
-		public TerminalNode BOOL() { return getToken(cazielParser.BOOL, 0); }
+		public TerminalNode STR() { return getToken(CazielParser.STR, 0); }
+		public TerminalNode INT() { return getToken(CazielParser.INT, 0); }
+		public TerminalNode DEC() { return getToken(CazielParser.DEC, 0); }
+		public TerminalNode BOOL() { return getToken(CazielParser.BOOL, 0); }
 		public LiteralContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_literal; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof cazielListener ) ((cazielListener)listener).enterLiteral(this);
+			if ( listener instanceof CazielListener ) ((CazielListener)listener).enterLiteral(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof cazielListener ) ((cazielListener)listener).exitLiteral(this);
+			if ( listener instanceof CazielListener ) ((CazielListener)listener).exitLiteral(this);
 		}
 	}
 
@@ -1176,18 +1176,18 @@ public class cazielParser extends Parser {
 	}
 
 	public static class EntradaContext extends ParserRuleContext {
-		public TerminalNode ID() { return getToken(cazielParser.ID, 0); }
+		public TerminalNode ID() { return getToken(CazielParser.ID, 0); }
 		public EntradaContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_entrada; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof cazielListener ) ((cazielListener)listener).enterEntrada(this);
+			if ( listener instanceof CazielListener ) ((CazielListener)listener).enterEntrada(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof cazielListener ) ((cazielListener)listener).exitEntrada(this);
+			if ( listener instanceof CazielListener ) ((CazielListener)listener).exitEntrada(this);
 		}
 	}
 
@@ -1217,7 +1217,7 @@ public class cazielParser extends Parser {
 	}
 
 	public static class SaidaContext extends ParserRuleContext {
-		public TerminalNode ID() { return getToken(cazielParser.ID, 0); }
+		public TerminalNode ID() { return getToken(CazielParser.ID, 0); }
 		public LiteralContext literal() {
 			return getRuleContext(LiteralContext.class,0);
 		}
@@ -1230,11 +1230,11 @@ public class cazielParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_saida; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof cazielListener ) ((cazielListener)listener).enterSaida(this);
+			if ( listener instanceof CazielListener ) ((CazielListener)listener).enterSaida(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof cazielListener ) ((cazielListener)listener).exitSaida(this);
+			if ( listener instanceof CazielListener ) ((CazielListener)listener).exitSaida(this);
 		}
 	}
 

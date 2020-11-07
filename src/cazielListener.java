@@ -1,159 +1,159 @@
-// Generated from caziel.g4 by ANTLR 4.8
+// Generated from Caziel.g4 by ANTLR 4.8
 import org.antlr.v4.runtime.tree.ParseTreeListener;
 
 /**
  * This interface defines a complete listener for a parse tree produced by
- * {@link cazielParser}.
+ * {@link CazielParser}.
  */
-public interface cazielListener extends ParseTreeListener {
+public interface CazielListener extends ParseTreeListener {
 	/**
-	 * Enter a parse tree produced by {@link cazielParser#programa}.
+	 * Enter a parse tree produced by {@link CazielParser#programa}.
 	 * @param ctx the parse tree
 	 */
-	void enterPrograma(cazielParser.ProgramaContext ctx);
+	void enterPrograma(CazielParser.ProgramaContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link cazielParser#programa}.
+	 * Exit a parse tree produced by {@link CazielParser#programa}.
 	 * @param ctx the parse tree
 	 */
-	void exitPrograma(cazielParser.ProgramaContext ctx);
+	void exitPrograma(CazielParser.ProgramaContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link cazielParser#statement}.
+	 * Enter a parse tree produced by {@link CazielParser#statement}.
 	 * @param ctx the parse tree
 	 */
-	void enterStatement(cazielParser.StatementContext ctx);
+	void enterStatement(CazielParser.StatementContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link cazielParser#statement}.
+	 * Exit a parse tree produced by {@link CazielParser#statement}.
 	 * @param ctx the parse tree
 	 */
-	void exitStatement(cazielParser.StatementContext ctx);
+	void exitStatement(CazielParser.StatementContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link cazielParser#var}.
+	 * Enter a parse tree produced by {@link CazielParser#var}.
 	 * @param ctx the parse tree
 	 */
-	void enterVar(cazielParser.VarContext ctx);
+	void enterVar(CazielParser.VarContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link cazielParser#var}.
+	 * Exit a parse tree produced by {@link CazielParser#var}.
 	 * @param ctx the parse tree
 	 */
-	void exitVar(cazielParser.VarContext ctx);
+	void exitVar(CazielParser.VarContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link cazielParser#attr}.
+	 * Enter a parse tree produced by {@link CazielParser#attr}.
 	 * @param ctx the parse tree
 	 */
-	void enterAttr(cazielParser.AttrContext ctx);
+	void enterAttr(CazielParser.AttrContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link cazielParser#attr}.
+	 * Exit a parse tree produced by {@link CazielParser#attr}.
 	 * @param ctx the parse tree
 	 */
-	void exitAttr(cazielParser.AttrContext ctx);
+	void exitAttr(CazielParser.AttrContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link cazielParser#exp}.
+	 * Enter a parse tree produced by {@link CazielParser#exp}.
 	 * @param ctx the parse tree
 	 */
-	void enterExp(cazielParser.ExpContext ctx);
+	void enterExp(CazielParser.ExpContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link cazielParser#exp}.
+	 * Exit a parse tree produced by {@link CazielParser#exp}.
 	 * @param ctx the parse tree
 	 */
-	void exitExp(cazielParser.ExpContext ctx);
+	void exitExp(CazielParser.ExpContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link cazielParser#condition}.
+	 * Enter a parse tree produced by {@link CazielParser#condition}.
 	 * @param ctx the parse tree
 	 */
-	void enterCondition(cazielParser.ConditionContext ctx);
+	void enterCondition(CazielParser.ConditionContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link cazielParser#condition}.
+	 * Exit a parse tree produced by {@link CazielParser#condition}.
 	 * @param ctx the parse tree
 	 */
-	void exitCondition(cazielParser.ConditionContext ctx);
+	void exitCondition(CazielParser.ConditionContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link cazielParser#loop}.
+	 * Enter a parse tree produced by {@link CazielParser#loop}.
 	 * @param ctx the parse tree
 	 */
-	void enterLoop(cazielParser.LoopContext ctx);
+	void enterLoop(CazielParser.LoopContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link cazielParser#loop}.
+	 * Exit a parse tree produced by {@link CazielParser#loop}.
 	 * @param ctx the parse tree
 	 */
-	void exitLoop(cazielParser.LoopContext ctx);
+	void exitLoop(CazielParser.LoopContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link cazielParser#forLoop}.
+	 * Enter a parse tree produced by {@link CazielParser#forLoop}.
 	 * @param ctx the parse tree
 	 */
-	void enterForLoop(cazielParser.ForLoopContext ctx);
+	void enterForLoop(CazielParser.ForLoopContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link cazielParser#forLoop}.
+	 * Exit a parse tree produced by {@link CazielParser#forLoop}.
 	 * @param ctx the parse tree
 	 */
-	void exitForLoop(cazielParser.ForLoopContext ctx);
+	void exitForLoop(CazielParser.ForLoopContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link cazielParser#whileLoop}.
+	 * Enter a parse tree produced by {@link CazielParser#whileLoop}.
 	 * @param ctx the parse tree
 	 */
-	void enterWhileLoop(cazielParser.WhileLoopContext ctx);
+	void enterWhileLoop(CazielParser.WhileLoopContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link cazielParser#whileLoop}.
+	 * Exit a parse tree produced by {@link CazielParser#whileLoop}.
 	 * @param ctx the parse tree
 	 */
-	void exitWhileLoop(cazielParser.WhileLoopContext ctx);
+	void exitWhileLoop(CazielParser.WhileLoopContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link cazielParser#doWhile}.
+	 * Enter a parse tree produced by {@link CazielParser#doWhile}.
 	 * @param ctx the parse tree
 	 */
-	void enterDoWhile(cazielParser.DoWhileContext ctx);
+	void enterDoWhile(CazielParser.DoWhileContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link cazielParser#doWhile}.
+	 * Exit a parse tree produced by {@link CazielParser#doWhile}.
 	 * @param ctx the parse tree
 	 */
-	void exitDoWhile(cazielParser.DoWhileContext ctx);
+	void exitDoWhile(CazielParser.DoWhileContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link cazielParser#io}.
+	 * Enter a parse tree produced by {@link CazielParser#io}.
 	 * @param ctx the parse tree
 	 */
-	void enterIo(cazielParser.IoContext ctx);
+	void enterIo(CazielParser.IoContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link cazielParser#io}.
+	 * Exit a parse tree produced by {@link CazielParser#io}.
 	 * @param ctx the parse tree
 	 */
-	void exitIo(cazielParser.IoContext ctx);
+	void exitIo(CazielParser.IoContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link cazielParser#op}.
+	 * Enter a parse tree produced by {@link CazielParser#op}.
 	 * @param ctx the parse tree
 	 */
-	void enterOp(cazielParser.OpContext ctx);
+	void enterOp(CazielParser.OpContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link cazielParser#op}.
+	 * Exit a parse tree produced by {@link CazielParser#op}.
 	 * @param ctx the parse tree
 	 */
-	void exitOp(cazielParser.OpContext ctx);
+	void exitOp(CazielParser.OpContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link cazielParser#literal}.
+	 * Enter a parse tree produced by {@link CazielParser#literal}.
 	 * @param ctx the parse tree
 	 */
-	void enterLiteral(cazielParser.LiteralContext ctx);
+	void enterLiteral(CazielParser.LiteralContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link cazielParser#literal}.
+	 * Exit a parse tree produced by {@link CazielParser#literal}.
 	 * @param ctx the parse tree
 	 */
-	void exitLiteral(cazielParser.LiteralContext ctx);
+	void exitLiteral(CazielParser.LiteralContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link cazielParser#entrada}.
+	 * Enter a parse tree produced by {@link CazielParser#entrada}.
 	 * @param ctx the parse tree
 	 */
-	void enterEntrada(cazielParser.EntradaContext ctx);
+	void enterEntrada(CazielParser.EntradaContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link cazielParser#entrada}.
+	 * Exit a parse tree produced by {@link CazielParser#entrada}.
 	 * @param ctx the parse tree
 	 */
-	void exitEntrada(cazielParser.EntradaContext ctx);
+	void exitEntrada(CazielParser.EntradaContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link cazielParser#saida}.
+	 * Enter a parse tree produced by {@link CazielParser#saida}.
 	 * @param ctx the parse tree
 	 */
-	void enterSaida(cazielParser.SaidaContext ctx);
+	void enterSaida(CazielParser.SaidaContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link cazielParser#saida}.
+	 * Exit a parse tree produced by {@link CazielParser#saida}.
 	 * @param ctx the parse tree
 	 */
-	void exitSaida(cazielParser.SaidaContext ctx);
+	void exitSaida(CazielParser.SaidaContext ctx);
 }

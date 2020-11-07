@@ -4,8 +4,9 @@
   "authors": "carlos né, quem mais ia fazer isso",
   "version": "1.0.0",
   "scripts": {
-    "generate": "antlr4 -o java caziel.g4 && cd java && javac *.java",
-    "compile": "cd java && grun caziel programa ..\\teste.cz -tokens"
+    "generate": "antlr4 -o src Caziel.g4 && cd src && javac *.java",
+    "test": "cd src && javac *.java && grun Caziel programa ..\\teste.cz -tokens",
+    "compile": "cd src && javac *.java && java CazielCompiler.class ..\\teste.cz"
   },
   "main": "",
   "dependencies": {}
