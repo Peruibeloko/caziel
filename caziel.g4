@@ -2,33 +2,44 @@ grammar Caziel;
 
 programa: ID '{' statement* '}';
 
-statement: var | attr | exp | condition | loop | io;
+statement: var | attr | expHead | condition | loop | io;
 
 var: 'var' TIPO ((ID ';') | attr);
 
-attr: ID OP_ATTR (exp | literal)';';
+attr: ID OP_ATTR (expHead | literal) ';';
 
-exp: (ID | literal) (op (ID | literal))+;
+expHead: (ID | literal) expTail+;
 
-condition:
-	'se' '(' (exp | ID) ')' 'entao' '{'
-    statement*
-  '}' ('se nao' 'se' '(' (exp | ID) ')' 'entao' '{'
-    statement*
-  '}')* ('se nao' 'entao' '{'
-    statement*
-  '}')? ('talvez' 'entao' '{'
-    statement*
-  '}')?;
+expTail: op (ID | literal);
+
+condition: conditionIf conditionElseIf* conditionElse?;
+
+conditionIf: conditionIfHead conditionIfTail;
+conditionIfHead: 'se' '(' (expHead | ID) ')';
+conditionIfTail: 'entao' '{' statement* '}';
+
+conditionElseIf: conditionElseIfHead conditionElseIfTail;
+conditionElseIfHead: 'se nao' 'se' '(' (expHead | ID) ')';
+conditionElseIfTail: 'entao' '{' statement* '}';
+
+conditionElse: 'se nao' 'entao' '{' statement* '}';
 
 loop: forLoop | whileLoop | doWhile;
 
-forLoop:
-	'para:' '(' (var | attr)? ';' exp ';' exp ')' 'faca' '{' statement* '}';
+forLoop: forLoopDecl forLoopBody;
+forLoopDecl: forLoopDeclVar forLoopDeclCheck forLoopDeclUpdate;
+forLoopDeclVar: 'para:' '(' (var | attr)? ';';
+forLoopDeclCheck: expHead ';';
+forLoopDeclUpdate: expHead ')';
+forLoopBody: 'faca' '{' statement* '}';
 
-whileLoop: 'enquanto:' '(' exp ')' 'faca' '{' statement* '}';
+whileLoop: whileLoopHead whileLoopTail;
+whileLoopHead: 'enquanto:' '(' expHead ')';
+whileLoopTail: 'faca' '{' statement* '}';
 
-doWhile: 'faca' '{' statement* '}' 'enquanto:' '(' exp ')' ';';
+doWhile: doWhileHead doWhileTail;
+doWhileHead: 'faca' '{' statement* '}';
+doWhileTail: 'enquanto:' '(' expHead ')' ';';
 
 io: entrada | saida;
 
@@ -42,13 +53,13 @@ INT: [0-9]+;
 
 DEC: [0-9]* '.' [0-9]+;
 
-BOOL: 'verdadeiro' | 'falso' | 'talvez';
+BOOL: 'verdadeiro' | 'falso';
 
 TIPO: 'string' | 'inteiro' | 'decimal' | 'booleano';
 
-entrada: 'leia:' ID ';';
+entrada: 'leia:' TIPO ',' ID ';';
 
-saida: 'imprima:' (ID | literal | exp) ';';
+saida: 'imprima:' (ID | literal | expHead) ';';
 
 ID: [a-zA-Z_$][a-zA-Z0-9_]*;
 
@@ -62,4 +73,4 @@ OP_BOOL_PREC_2: '<' | '<=' | '>' | '>=' | '==';
 
 OP_ATTR: '=' | '+=' | '-=' | '*=' | '/=';
 
-WS: [ \t\r\n] -> skip;
+WS: [ \t\r\n]+ -> skip;

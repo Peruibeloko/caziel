@@ -2,7 +2,7 @@ FizzBuzz {
   var inteiro numero;
   var inteiro contador = 0;
 
-  leia: numero;
+  leia: inteiro, numero;
 
   enquanto: (contador <= numero) faca {
     se (numero % 3 == 0 && numero % 5 == 0) entao {
@@ -13,8 +13,6 @@ FizzBuzz {
       imprima: "Buzz";
     } se nao entao {
       imprima: "Numero :" + numero;
-    } talvez entao { 
-      imprima: "o que vc fez mano";
     }
     contador += 1;
   }
