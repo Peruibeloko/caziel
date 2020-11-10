@@ -3,6 +3,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.HashMap;
 
+import org.antlr.v4.runtime.Token;
 import org.antlr.v4.runtime.tree.TerminalNode;
 
 public class Caziel extends CazielBaseListener {
@@ -88,7 +89,9 @@ public class Caziel extends CazielBaseListener {
         break;
 
       default:
-        // TODO Tipo não conhecido
+        // ! Tipo desconhecido
+        Token error = ctx.exception.getOffendingToken();
+        System.err.printf("Linha %d: Eu não faço idéia do que %s seja", error.getLine(), error.getText());
         break;
     }
     insertCode(true, type, " ");
@@ -99,8 +102,11 @@ public class Caziel extends CazielBaseListener {
       if (symTab.get(id) == null) {
         insertCode(false, id, ";\n");
         symTab.put(id, "");
+      } else {
+        // ! Variável já declarada
+        Token error = ctx.exception.getOffendingToken();
+        System.err.printf("Linha %d: A variável %s já foi declarada", error.getLine(), error.getText());
       }
-      // TODO Variável já declarada
     }
   }
 
@@ -130,7 +136,11 @@ public class Caziel extends CazielBaseListener {
 
       if (symTab.get(id) != null)
         insertCode(false, id, " ");
-      // TODO Variável não declarada
+      else {
+        // ! Variável não declarada
+        Token error = ctx.exception.getOffendingToken();
+        System.err.printf("Linha %d: A variável %s ainda não foi declarada!", error.getLine(), error.getText());
+      }
     }
   }
 
@@ -143,7 +153,11 @@ public class Caziel extends CazielBaseListener {
 
       if (symTab.get(id) != null)
         insertCode(false, id, " ");
-      // TODO Variável não declarada
+      else {
+        // ! Variável não declarada
+        Token error = ctx.exception.getOffendingToken();
+        System.err.printf("Linha %d: A variável %s ainda não foi declarada!", error.getLine(), error.getText());
+      }
     }
   }
 
@@ -158,7 +172,11 @@ public class Caziel extends CazielBaseListener {
 
       if (symTab.get(id) != null)
         insertCode(false, id);
-      // TODO Variável não declarada
+      else {
+        // ! Variável não declarada
+        Token error = ctx.exception.getOffendingToken();
+        System.err.printf("Linha %d: A variável %s ainda não foi declarada!", error.getLine(), error.getText());
+      }
     }
   }
 
@@ -190,7 +208,11 @@ public class Caziel extends CazielBaseListener {
 
       if (symTab.get(id) != null)
         insertCode(false, id);
-      // TODO Variável não declarada
+      else {
+        // ! Variável não declarada
+        Token error = ctx.exception.getOffendingToken();
+        System.err.printf("Linha %d: A variável %s ainda não foi declarada!", error.getLine(), error.getText());
+      }
     }
   }
 
@@ -340,7 +362,9 @@ public class Caziel extends CazielBaseListener {
         break;
 
       default:
-        // TODO Tipo não conhecido
+        // ! Tipo desconhecido
+        Token error = ctx.exception.getOffendingToken();
+        System.err.printf("Linha %d: Eu não faço idéia do que %s seja", error.getLine(), error.getText());
         break;
     }
     insertCode(true, "s.close();\n\n");
